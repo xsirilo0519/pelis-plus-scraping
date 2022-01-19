@@ -1,6 +1,6 @@
 package co.com.sofka.peliculas.infra.generic;
 
-public final class StoredEventSerializer extends co.com.sofka.score.infra.generic.AbstractSerializer {
+public final class StoredEventSerializer extends AbstractSerializer {
 
     private static StoredEventSerializer eventSerializer;
 

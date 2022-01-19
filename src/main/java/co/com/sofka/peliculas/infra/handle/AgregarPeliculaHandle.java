@@ -7,6 +7,9 @@ import co.com.sofka.peliculas.usecase.AgregarPeliculaUseCase;
 import co.com.sofka.peliculas.usecase.CrearCarteleraUseCase;
 import io.quarkus.vertx.ConsumeEvent;
 
+import javax.enterprise.context.ApplicationScoped;
+
+@ApplicationScoped
 public class AgregarPeliculaHandle extends UseCaseHandle {
     private final AgregarPeliculaUseCase useCase;
 

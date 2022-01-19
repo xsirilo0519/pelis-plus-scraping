@@ -5,9 +5,11 @@ import co.com.sofka.peliculas.domain.cartelera.command.AgregarPeliculaCommand;
 import co.com.sofka.peliculas.domain.generic.DomainEvent;
 import co.com.sofka.peliculas.domain.generic.EventStoreRepository;
 
+import javax.enterprise.context.Dependent;
 import java.util.List;
 import java.util.function.Function;
 
+@Dependent
 public class AgregarPeliculaUseCase implements Function<AgregarPeliculaCommand, List<DomainEvent>> {
 
     private final EventStoreRepository repository;
@@ -18,9 +20,10 @@ public class AgregarPeliculaUseCase implements Function<AgregarPeliculaCommand, 
 
     @Override
     public List<DomainEvent> apply(AgregarPeliculaCommand command) {
-        var events=repository.getEventsBy("catalogo",command.getCarteleraId());
+        System.out.println(command.getCarteleraId()+" "+command.getPeliculaId()+" "+command.getNombre()+" "+command.getPath()+" "+command.getDescripcion()+" "+command.getCategoria());
+        var events=repository.getEventsBy("cartelera",command.getCarteleraId());
         var cartelera= Cartelera.from(command.getCarteleraId(),events);
-        cartelera.addPelicula(command.getCarteleraId(),command.getNombre(),command.getPath(),command.getDescripcion(),command.getCategoria());
+        cartelera.addPelicula(command.getPeliculaId(),command.getNombre(),command.getPath(),command.getDescripcion(),command.getCategoria());
         return cartelera.getUncommittedChanges();
     }
 }

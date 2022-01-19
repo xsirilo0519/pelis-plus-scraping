@@ -11,6 +11,7 @@ public class AgregarPeliculaCommand extends Command {
     private String descripcion;
     private String categoria;
 
+
     public String getCarteleraId() {
         return carteleraId;
     }

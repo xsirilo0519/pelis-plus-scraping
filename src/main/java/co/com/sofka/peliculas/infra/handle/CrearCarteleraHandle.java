@@ -5,6 +5,9 @@ import co.com.sofka.peliculas.infra.generic.UseCaseHandle;
 import co.com.sofka.peliculas.usecase.CrearCarteleraUseCase;
 import io.quarkus.vertx.ConsumeEvent;
 
+import javax.enterprise.context.ApplicationScoped;
+
+@ApplicationScoped
 public class CrearCarteleraHandle extends UseCaseHandle {
     private final CrearCarteleraUseCase useCase;
 

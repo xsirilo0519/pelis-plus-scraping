@@ -31,6 +31,7 @@ public class CommandController {
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("/addPelicula")
     public Response executor (AgregarPeliculaCommand command){
+        System.out.println(command.getCarteleraId()+" "+command.getPeliculaId()+" "+command.getNombre()+" "+command.getPath()+" "+command.getDescripcion()+" "+command.getCategoria());
         bus.publish(command.getType(), command);
         return Response.ok().build();
     }

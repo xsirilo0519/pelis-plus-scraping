@@ -17,6 +17,7 @@ public interface EventChange {
      *
      * @param changeEvent the change event
      */
+    //<? extends DomainEvent> extiende cualquier cosa que venga de DoimainEvent
     default void listener(Consumer<? extends DomainEvent> changeEvent) {
         behaviors.add((Consumer<? super DomainEvent>) changeEvent);
     }
