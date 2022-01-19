@@ -32,7 +32,6 @@ public class Cartelera extends AggregateRoot implements EventChange {
     }
 
     public void addPelicula(String id, String nombre, String path, String descripcion, String categoria){
-        this.peliculas.put(id,new Pelicula(id,nombre,path,descripcion,categoria));
         appendChange(new PeliculaAgregada(id,nombre,path,descripcion,categoria)).apply();
     }
 
