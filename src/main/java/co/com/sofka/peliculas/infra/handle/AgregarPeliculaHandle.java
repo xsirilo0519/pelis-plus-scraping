@@ -1,10 +1,8 @@
 package co.com.sofka.peliculas.infra.handle;
 
 import co.com.sofka.peliculas.domain.cartelera.command.AgregarPeliculaCommand;
-import co.com.sofka.peliculas.domain.cartelera.command.CrearCarteleraCommand;
 import co.com.sofka.peliculas.infra.generic.UseCaseHandle;
 import co.com.sofka.peliculas.usecase.AgregarPeliculaUseCase;
-import co.com.sofka.peliculas.usecase.CrearCarteleraUseCase;
 import io.quarkus.vertx.ConsumeEvent;
 
 import javax.enterprise.context.ApplicationScoped;

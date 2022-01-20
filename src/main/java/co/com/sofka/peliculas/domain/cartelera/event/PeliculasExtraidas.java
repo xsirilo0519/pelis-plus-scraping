@@ -2,7 +2,7 @@ package co.com.sofka.peliculas.domain.cartelera.event;
 
 import co.com.sofka.peliculas.domain.generic.DomainEvent;
 
-public class PeliculaAgregada extends DomainEvent {
+public class PeliculasExtraidas extends DomainEvent {
 
     private final String peliculaId;
     private final String nombre;
@@ -10,14 +10,16 @@ public class PeliculaAgregada extends DomainEvent {
     private final String descripcion;
     private final String categoria;
 
-    public PeliculaAgregada(String peliculaId, String nombre, String path, String descripcion, String categoria) {
-        super("sofka.campus.cartelera.peliculaagregada");
+    public PeliculasExtraidas(String peliculaId, String nombre, String path, String descripcion, String categoria) {
+        super("sofka.campus.cartelera.peliculasextraidas");
         this.peliculaId=peliculaId;
         this.nombre=nombre;
         this.path=path;
         this.descripcion=descripcion;
         this.categoria=categoria;
     }
+
+
 
     public String getPeliculaId() {
         return peliculaId;
@@ -39,4 +41,3 @@ public class PeliculaAgregada extends DomainEvent {
         return categoria;
     }
 }
-

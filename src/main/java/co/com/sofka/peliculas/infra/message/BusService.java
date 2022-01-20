@@ -17,9 +17,7 @@ import java.nio.charset.StandardCharsets;
 
 @ApplicationScoped
 public class BusService {
-    //llave de acceso
     private static final String EXCHANGE = "executor";
-    //cola de eventos
     private static final String EVENT_QUEUE = "event.queue";
 
     private final EventBus bus;
@@ -33,7 +31,6 @@ public class BusService {
         this.socket = socket;
         this.rabbitMQClient = rabbitMQClient;
     }
-
     public void onApplicationStart(@Observes StartupEvent event) throws IOException {
         Connection connection = rabbitMQClient.connect();
         channel = connection.createChannel();

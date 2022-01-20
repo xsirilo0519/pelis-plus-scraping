@@ -1,10 +1,13 @@
-package co.com.sofka.peliculas.infra.generic;
+package co.com.sofka.peliculas.domain.generic;
 
 
-import co.com.sofka.peliculas.domain.generic.DomainEvent;
+import co.com.sofka.peliculas.infra.generic.DeserializeException;
+import co.com.sofka.peliculas.infra.generic.EventSerializer;
+import co.com.sofka.peliculas.infra.generic.StoredEventSerializer;
 import com.google.gson.Gson;
 
 import java.util.Date;
+
 
 public final class StoredEvent {
 

@@ -16,6 +16,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.jboss.logging.Logger;
+
 @ServerEndpoint("/retrieve/{correlationId}")
 @ApplicationScoped
 public class SocketService {

@@ -6,6 +6,9 @@ public class CrearCarteleraCommand extends Command {
     private String carteleraId;
     private String date;
 
+    public CrearCarteleraCommand() {
+    }
+
     public String getCarteleraId() {
         return carteleraId;
     }

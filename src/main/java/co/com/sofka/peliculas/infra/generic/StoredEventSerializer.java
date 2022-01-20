@@ -1,5 +1,8 @@
 package co.com.sofka.peliculas.infra.generic;
 
+
+import co.com.sofka.peliculas.domain.generic.StoredEvent;
+
 public final class StoredEventSerializer extends AbstractSerializer {
 
     private static StoredEventSerializer eventSerializer;

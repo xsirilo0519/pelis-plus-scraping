@@ -2,8 +2,7 @@ package co.com.sofka.peliculas.domain.cartelera.command;
 
 import co.com.sofka.peliculas.domain.generic.Command;
 
-public class AgregarPeliculaCommand extends Command {
-
+public class ExtraerPeliculasCommand extends Command {
     private String carteleraId;
     private String peliculaId;
     private String nombre;
@@ -11,9 +10,7 @@ public class AgregarPeliculaCommand extends Command {
     private String descripcion;
     private String categoria;
 
-
-    public AgregarPeliculaCommand(){
-
+    public ExtraerPeliculasCommand() {
     }
 
     public String getCarteleraId() {

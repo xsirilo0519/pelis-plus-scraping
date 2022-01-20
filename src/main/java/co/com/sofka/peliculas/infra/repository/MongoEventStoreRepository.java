@@ -3,7 +3,7 @@ package co.com.sofka.peliculas.infra.repository;
 import co.com.sofka.peliculas.domain.generic.DomainEvent;
 import co.com.sofka.peliculas.domain.generic.EventStoreRepository;
 import co.com.sofka.peliculas.infra.generic.EventSerializer;
-import co.com.sofka.peliculas.infra.generic.StoredEvent;
+import co.com.sofka.peliculas.domain.generic.StoredEvent;
 
 import com.mongodb.Function;
 import com.mongodb.client.MongoClient;

@@ -1,9 +1,13 @@
 package co.com.sofka.peliculas.infra.generic;
+
 import com.google.gson.*;
 
 import java.lang.reflect.Type;
 import java.time.Instant;
 
+/**
+ * The type Abstract serializer.
+ */
 public abstract class AbstractSerializer {
     /**
      * The Gson.
@@ -15,8 +19,8 @@ public abstract class AbstractSerializer {
      */
     protected AbstractSerializer() {
         this.gson = new GsonBuilder()
-                .registerTypeAdapter(Instant.class, new DateSerializer())
-                .registerTypeAdapter(Instant.class, new DateDeserializer())
+                .registerTypeAdapter(Instant.class, new AbstractSerializer.DateSerializer())
+                .registerTypeAdapter(Instant.class, new AbstractSerializer.DateDeserializer())
                 .serializeNulls()
                 .create();
     }
@@ -45,3 +49,4 @@ public abstract class AbstractSerializer {
         }
     }
 }
+

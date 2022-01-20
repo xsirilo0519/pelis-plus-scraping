@@ -20,7 +20,6 @@ public class AgregarPeliculaUseCase implements Function<AgregarPeliculaCommand, 
 
     @Override
     public List<DomainEvent> apply(AgregarPeliculaCommand command) {
-        System.out.println(command.getCarteleraId()+" "+command.getPeliculaId()+" "+command.getNombre()+" "+command.getPath()+" "+command.getDescripcion()+" "+command.getCategoria());
         var events=repository.getEventsBy("cartelera",command.getCarteleraId());
         var cartelera= Cartelera.from(command.getCarteleraId(),events);
         cartelera.addPelicula(command.getPeliculaId(),command.getNombre(),command.getPath(),command.getDescripcion(),command.getCategoria());
